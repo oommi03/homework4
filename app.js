@@ -4,8 +4,7 @@ var bodyParser = require('body-parser');
 var itemRouter = require('./routers/item');
 
 var app = express();
-
-var PORT = 3000;
+var PORT = 5000;
 
 app.set('view engine', 'ejs');
 
