@@ -1,0 +1,79 @@
+<!- view: index.ejs -->
+<% include ./header %>
+<div class='container'>
+	<h2><%= title %></h2>
+</div>
+</div>
+	<form method="POST" action="/user" >
+		<div class="container">
+	<label>Id</label><br>
+	<input type="number" name="id" class="form-control"><br>
+</div>
+<div class="container">
+	<label>Name</label><br>
+	<input type="text" name="name" class="form-control"><br>
+</div>
+<div class="container">
+	<label>Age</label><br>
+	<input type="number" name="age" class="form-control"><br>
+</div>
+<div class="container">
+	<label>Email</label><br>
+	<input type="text" name="email" class="form-control"><br><br>
+</div>
+<div class="container">
+	<input  type="submit"  value="Add" class="btn btn-info"> 
+</div>
+</form>
+</div>
+
+<p>
+<br><br>
+<div class 'contrainer'>
+	<ul class="list-group">
+<% users.forEach( function(user) { %>
+<li class="list-group-item" >ID :<%= user.id %>&nbsp;&nbsp;&nbsp;&nbsp; Name : <%= user.name %>&nbsp;&nbsp;&nbsp;&nbsp; Age : <%= user.age %>&nbsp;&nbsp;&nbsp;&nbsp; Email : <%= user.email %></li>
+<% }) %>
+</ul>
+</div>
+<br><br>
+</p>
+<div class='container'>
+<h2>Change</h2>
+</div>
+</div>
+<form method="POST" action="/user/:userId/change" >
+	<div class="container">
+<label>Id</label><br>
+<input type="number" name="id" class="form-control"><br>
+</div>
+<div class="container">
+<label>Name</label><br>
+<input type="text" name="name" class="form-control"><br>
+</div>
+<div class="container">
+<label>Age</label><br>
+<input type="number" name="age" class="form-control"><br>
+</div>
+<div class="container">
+<label>Email</label><br>
+<input type="text" name="email" class="form-control"><br><br>
+</div>
+<div class="container">
+<input  type="submit"  value="Change" class="btn btn-info"> 
+</div>
+</form>
+</div>
+
+
+
+	<br><br>
+	<div class ='container'>
+	<h2>DELETE : input id</h2>
+	<form method="post" action="/user/:userId">
+	<input type="number" class="form-control" name="id">
+	<input type="submit" value="delete" name="Del" class="btn btn-info	" >
+</form>
+</div>
+
+<% include ./footer %>

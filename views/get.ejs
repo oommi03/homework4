@@ -1,0 +1,12 @@
+<!- view: index.ejs -->
+<% include ./header %>
+	<h2><%= title %></h2>
+
+<ul>
+<% users.forEach( function(user) { %>
+<li>ID : <%= user.id %>&nbsp;&nbsp;&nbsp;&nbsp; Name : <%= user.name %>&nbsp;&nbsp;&nbsp;&nbsp; Age : <%= user.age %>&nbsp;&nbsp;&nbsp;&nbsp; Email : <%= user.email %></li>
+<% }) %>
+</ul>
+	
+
+<% include ./footer %>
