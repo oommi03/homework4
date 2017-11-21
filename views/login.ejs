@@ -1,0 +1,17 @@
+<% include ./header %>
+<br>
+<br>
+<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type=button onClick='window.history.back()' value='Back'> 
+    <form method="POST" action="/authenticate">
+        <div class="container">
+            <br>
+            <p>username</p>
+            <input name="name">
+            <p>password</p>
+            <input type="password" name="password"><br><br>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <% include ./footer %>
